@@ -9,6 +9,8 @@ float angle  = 0.0;
 float offset = 250;
 float scalar = 2;
 float speed  = 0.05;
+float es1 = 2;
+float es2 = 2;
 
 
 void setup(){
@@ -19,9 +21,13 @@ void setup(){
 
 void draw(){
 	countSwirls += 1;
+	if (countSwirls>=1000){
+		es1+= 0.005;
+		es2+= 0.005;
+	}
 	float x = offset + cos(angle)*scalar;
   	float y = offset + sin(angle)*scalar;
-  	ellipse(x, y, 2, 2);
+  	ellipse(x, y, es1, es2);
   	angle  += speed;
   	scalar += speed;
   	System.out.println(x +", "+ y+" Swirls: "+countSwirls);
