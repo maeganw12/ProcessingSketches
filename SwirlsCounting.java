@@ -2,6 +2,8 @@
 int sizex = 500;
 int sizey = 500;
 
+int countSwirls = 0;
+
 //Variables neccessary for swirls
 float angle  = 0.0;
 float offset = 250;
@@ -16,10 +18,11 @@ void setup(){
 }
 
 void draw(){
+	countSwirls += 1;
 	float x = offset + cos(angle)*scalar;
   	float y = offset + sin(angle)*scalar;
   	ellipse(x, y, 2, 2);
   	angle  += speed;
   	scalar += speed;
-  	System.out.println(x +", "+ y);
+  	System.out.println(x +", "+ y+" Swirls: "+countSwirls);
 }
