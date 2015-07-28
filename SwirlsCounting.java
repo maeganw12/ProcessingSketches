@@ -22,8 +22,12 @@ void setup(){
 void draw(){
 	countSwirls += 1;
 	if (countSwirls>=1000){
-		es1+= 0.005;
-		es2+= 0.005;
+		es1+= 0.0005;
+		es2+= 0.0005;
+	}
+	if (countSwirls>=2000){
+		es1 += 0.005;
+		es2 += 0.005;
 	}
 	float x = offset + cos(angle)*scalar;
   	float y = offset + sin(angle)*scalar;
