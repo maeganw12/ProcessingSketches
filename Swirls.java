@@ -1,6 +1,6 @@
 //size variables for output window
-float sizex = 500;
-float sizey = 500;
+int sizex = 500;
+int sizey = 500;
 
 //Variables neccessary for swirls
 float angle  = 0.0;
@@ -10,7 +10,7 @@ float speed  = 0.05;
 
 
 void setup(){
-	size(sizex, sizey); //sets size of output window
+	size(sizex, sizey); //sets size of output window: Size only reads in ints
 	fill(0); //Will not fill the shape drawn;
 	smooth(); //Will make shape smooth;
 }
