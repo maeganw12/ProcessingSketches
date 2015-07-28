@@ -29,6 +29,14 @@ void draw(){
 		es1 += 0.005;
 		es2 += 0.005;
 	}
+	if (countSwirls>= 3000){
+		es1 -= 0.0155;
+		es2 -= 0.0155;
+	}
+	if (countSwirls >= 5000){
+		es1 = 0;
+		es2 = 0;
+	}
 	float x = offset + cos(angle)*scalar;
   	float y = offset + sin(angle)*scalar;
   	ellipse(x, y, es1, es2);
