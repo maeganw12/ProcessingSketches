@@ -55,11 +55,11 @@ void spawn(){
 	vert3x = mouseX; //mouseX
 	vert3y = mouseY; //mouseY
 	vert4x = mouseX;
-	vert4y = mouseY - 15;
-	vert5x = mouseX - 15;
-	vert5y = mouseY - 15;
-	vert6x = mouseX - 15;
-	vert6y = mouseY - 10;
+	vert4y = mouseY + 15;
+	vert5x = mouseX + 15;
+	vert5y = mouseY + 15;
+	vert6x = mouseX + 15;
+	vert6y = mouseY + 10;
 
 	beginShape();
 	fill (rValue, gValue, bValue);
